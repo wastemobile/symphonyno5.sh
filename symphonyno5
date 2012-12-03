@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Symphony No.5 Command Line Tool
-# Homepage: http://github.com/firegoby/symphonyno5.sh.git
+# Clone from: http://github.com/firegoby/symphonyno5.sh.git
 # Author: Chris Batchelor (http://firegoby.com/)
 # License: Unlicense (http://unlicense.org)
 
@@ -71,7 +71,7 @@ new(){
   then
     echo ""
     echo "Creating new Symphony: $project"
-    git clone -b master --depth 1 git://github.com/firegoby/symphonyno5.git $project
+    git clone -b master --depth 1 git://github.com/wastemobile/symphonyno5.git $project
     cd $project
     echo "Removing Symphony No.5 git history"
     rm -rf .git
