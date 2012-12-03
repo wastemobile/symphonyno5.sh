@@ -1,49 +1,59 @@
-# Symphony No.5 Command Line Tool
+# Symphony No.5 Command Line Tool 終端機命令列工具
 
 * Version 0.3.0
 * Date: 3rd December 2012
 
-## Overview
+### 注意事項！
 
-Symphony No.5 Command Line Tool is a bash script used to easily adminster [Symphony No.5](http://github.com/firegoby/symphonyno5.git) projects from a Unix-y command line.
+此處的程序已將預設抓取之倉儲改為 [@wastemobile](http://github/wastemobile) 的私人倉儲，其中的外掛清單與預設並不相同，如果您希望藉由 Firegoby 的設定、從頭開始一個乾淨的 Symphony No.5 install，請務必修改程序第74行中的設定。
 
-## Features
+將程序第74行的內容改回 `... git://github.com/firegoby/symphonyno5.git ...`，或是直接前往 [原始倉儲](https://github.com/firegoby/symphonyno5.sh) 拷貝正確的檔案。
 
-* Create and setup new projects
-* Update/install Symphony Extensions as git submodules from `extensions.csv`
-* Set directory & file permissions for the project
-* Fix directory & file permissions to those set in `manifest/config.php`
+## 概觀
 
-## Installation
+Symphony No.5 終端機命令列工具是一個用來輕鬆管理 [Symphony No.5](http://github.com/firegoby/symphonyno5.git) 的 bash script。
 
-1. Copy `symphonyno5` to a directory in your `$PATH`
-2. Run `chmod +x symphonyno5` to make it executable
+## 功能
 
-## Usage
+* 建立與設置新的 Symphony CMS 開發專案。
+* 根據 `extensions.csv` 檔案列表，更新與安裝 Symphony 的 git submodules 外掛。
+* 編譯且串聯 Coffeescript 與 Javascript 檔案，產生單一最小化的正式檔案。
+* 將 LESS、Sass 或 Stylus 撰寫的格式，編譯成單一經壓縮過的 CSS 樣式表。
+* 設定正式環境的目錄與檔案權限。
+* 根據 `manifest/config.php` 中的設定，修復目錄與檔案權限。
 
-***Note**: All commands other than `new` should be run from a Symphony CMS root directory.*
+## 安裝
 
-### Create a new project
+1. 拷貝 `symphonyno5` 到任意已存在於系統 `$PATH` 中的可執行目錄。
+2. 執行 `chmod +x symphonyno5` 讓程序俱備可執行的權限。
+
+	Mac 的環境路徑設定都在 /etc/paths 檔案中（可能需要 sudo 權限），使用 echo $PATH 指令可以觀看目前設定的所有路徑。我會在個人目錄下建立一個 bin 或 scripts 目錄，將這目錄加入路徑設定，未來還有各種非系統預設的程序要執行，就通通集中擺放。
+
+## 如何使用
+
+***Note**: 除了新增 `new` 指令之外，其它指令都要在專案的根目錄下運行。*
+
+### 新建開發專案
 
     symphonyno5 new projectname
 
-### Update/install Symphony Extensions from `extensions.csv`
+### 根據 `extensions.csv` 列表，更新/安裝 Symphony Extensions 
 
     symphonyno5 extensions
 
-### Set directory & file permissions
+### 設定目錄與檔案權限
 
     symphonyno5 setperms 0775 0664
 
-### Fix directory & file permissions to those set in `manifest/config.php`
+### 根據 `manifest/config.php` 修復目錄與檔案權限
 
     symphonyno5 fixperms
 
-## Frequently Asked Questions
+## FAQ
 
-1. **What happened to all the CSS & Javascript compilation stuff!?**
+1. **為什麼所有 CSS 與 Javascript 編譯、最小化的功能都不見了？**
 
-  It got moved to a dedicated Symphony extension [Asset Compiler](http://github.com/firegoby/asset_compiler) - take a look! If you still need to the old functionality use git to checkout `0.2.0`
+  一個專用於這些功能的外掛 [Asset Compiler](http://github.com/firegoby/asset_compiler) 已經誕生了！不再使用命令列，使用 master.xsl 中的標籤就能控制，試試看！（ps. 如果還是想用CLI，就用 git 切回 `0.2.0` 版吧。）
 
 ## Changelog
 
