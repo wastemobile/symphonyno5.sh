@@ -132,9 +132,9 @@ new(){
       git checkout -b develop
       echo "*********************************"
       echo ""
-      echo "Bravo! Bravo! Your new Symphony '$project' has been created!"
+      echo "恭喜！你的 Symphony 新專案： '$project' 已經成功建立！"
       echo ""
-      echo "'cd $project' to get started..."
+      echo "'cd $project' 切換到專案目錄開始工作吧..."
       exit 0
     fi
   else
