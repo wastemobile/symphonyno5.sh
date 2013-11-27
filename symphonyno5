@@ -48,13 +48,13 @@ extensions() {
 
 setperms() {
   verifySymphonyRoot
-  echo "Setting manifest directory permissions to $1"
+  echo "設定 manifest 目錄的權限為 $1"
   find manifest.* -type d -exec chmod $1 {} \;
-  echo "Setting workspace directory permissions to $1"
+  echo "設定 workspace 目錄的權限為 $1"
   find workspace -type d -exec chmod $1 {} \;
-  echo "Setting manifest file permissions to $2"
+  echo "設定 manifest 檔案的權限為 $2"
   find manifest.* -type f -exec chmod $2 {} \;
-  echo "Setting workspace file permissions to $2"
+  echo "設定 workspace 檔案的權限為 $2"
   find workspace -type f -exec chmod $2 {} \;
 }
 
@@ -115,20 +115,20 @@ new(){
       fi
       fileperms=`awk '/file/ {getline;print substr($0, length-5, 4)}' manifest/config.php`
       dirperms=`awk '/directory/ {getline;print substr($0, length-5, 4)}' manifest/config.php`
-      echo "Setting root directory permissions to $dirperms"
+      echo "設定根目錄的權限為 $dirperms"
       chmod $dirperms .
-      echo "Setting root files permissions to $fileperms"
+      echo "設定根目錄檔案的權限為 $fileperms"
       find . -type f -maxdepth 1 -exec chmod $fileperms {} \;
-      echo "Setting Symphony directory permissions to $dirperms"
+      echo "設定 Symphony 目錄的權限為 $dirperms"
       find symphony -type d -exec chmod $dirperms {} \;
-      echo "Setting Symphony file permissions to $fileperms"
+      echo "設定 Symphony 檔案的權限為 $fileperms"
       find symphony -type f -exec chmod $fileperms {} \;
       fixperms
-      echo "Adding Project files for initial commit"
+      echo "替專案設置 Git 初始化"
       git add .
-      echo "Creating initial commit"
+      echo "建立第一個提交"
       git commit -m "Initial commit"
-      echo "Creating & switching to branch 'develop' from branch 'master'"
+      echo "建立並切換到 'develop' 分支（根據分支 'master'）"
       git checkout -b develop
       echo "*********************************"
       echo ""
