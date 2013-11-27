@@ -3,6 +3,10 @@
 * Version 0.3.0
 * Date: 3rd December 2012
 
+### 更新（2013/11/20）
+
+完備了一些指令的翻譯。將安裝程序更新到 Symphony CMS 2.3.4，移除了一個與其不相容的外掛，並新增了與前台多語設定相關的幾個外掛。
+
 ### 注意事項！
 
 此處的程序已將預設抓取之倉儲改為 [@wastemobile](http://github/wastemobile) 的私人倉儲，其中的外掛清單與預設並不相同，如果您希望藉由 Firegoby 的設定、從頭開始一個乾淨的 Symphony No.5 install，請務必修改程序第74行中的設定。
