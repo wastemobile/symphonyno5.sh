@@ -41,7 +41,7 @@ extensions() {
     do
       git submodule add "$one" "$two"
     done < "$filename"
-    git submodule update --init
+    git submodule update --init --recursive
   else
     echo "錯誤：找不到 extensions.csv 檔案！指令終止。"
   fi

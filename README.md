@@ -1,7 +1,8 @@
-# Symphony No.5 Command Line Tool 終端機命令列工具
+## Symphony No.5 Command Line Tool 終端機命令列工具
 
 * Version 0.3.0
 * Date: 3rd December 2012
+* Symphony CMS version 2.3.4
 
 ### 更新（2013/11/20）
 
