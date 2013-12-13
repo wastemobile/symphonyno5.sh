@@ -5,6 +5,8 @@
 # Original Author: Chris Batchelor (http://firegoby.com/)
 # License: Unlicense (http://unlicense.org)
 
+# Symphony CMS 2.3.4
+
 usage() {
   scriptname=`basename $0`
   echo "Symphony No.5 使用方法"
