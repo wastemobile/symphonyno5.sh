@@ -6,7 +6,15 @@
 * Date: 3rd December 2012
 * Symphony CMS version 2.3.4
 
-### 更新（2013/11/20）
+### 更新記錄
+
+#### 2013/12/31
+
+將外掛清單回復至預設，僅添加 Dump DB 與 DB Sync 兩個與資料庫相關的外掛，測試資料庫同步或是建立 Ensemble 安裝檔的程序。比較麻煩的是，Dump DB 需要在 `manifest/config.php` 中添加額外設定，否則是不會啟用的。
+
+實際上在外掛安裝使用的 `extension.driver.php` 裡面，可以透過 `public function install()` 區塊，送進必要的資訊，在安裝過程中一並設置好預設的格式等等，但 Dump DB 似乎是將這些設定留給用戶自行添加，這就有點小麻煩。
+
+#### 2013/11/20
 
 完備了一些指令的翻譯。將安裝程序更新到 Symphony CMS 2.3.4，移除了一個與其不相容的外掛，並新增了與前台多語設定相關的幾個外掛。
 
