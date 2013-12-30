@@ -1,4 +1,6 @@
-## Symphony No.5 Command Line Tool 終端機命令列工具
+## Symphony No.5 Command Line Tool
+
+### 快速建置與管理Symphony CMS的終端機指令
 
 * Version 0.3.0
 * Date: 3rd December 2012
