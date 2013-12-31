@@ -112,8 +112,9 @@ new(){
       fi
       if [ -d install ]
       then
-        echo "移除安裝檔案"
-        rm -rf install
+        echo "為了製作Ensemble，故暫不移除安裝目錄，請自行決定刪除與否"
+        # echo "移除安裝檔案"
+        # rm -rf install
       fi
       fileperms=`awk '/file/ {getline;print substr($0, length-5, 4)}' manifest/config.php`
       dirperms=`awk '/directory/ {getline;print substr($0, length-5, 4)}' manifest/config.php`
